@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,n,i;
+    int arr[20];
+    int c,d,swap;
+    printf("Enter the value of array:");
+    scanf("%d",&n);
+    
+    printf("Array of %d value is:\n",n);
+    
+    for(i=0; i<n; i++)
+    scanf("%d",&arr[i]);
+    
+    printf("Array is:");
+    
+    for(i=0; i<n; i++)
+    printf("%d\t",arr[i]);
+    
+    for(i=0; i<n-1; i++)
+    {
+        for(d=0; d<n-1; d++)
+        {
+            if(arr[d]>arr[d+1])
+            {
+                swap=arr[d];
+                arr[d]=arr[d+1];
+                arr[d+1]=swap;
+            }
+        }
+        
+    }
+    printf("\nSorted array is:");
+    
+    for(i=0; i<n; i++)
+    printf("%d\t",arr[i]);
+}
